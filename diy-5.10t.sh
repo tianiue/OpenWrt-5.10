@@ -13,10 +13,10 @@
 # Custom configuration
 # 修改内核5.10
 sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
-sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=5.10/g' target/linux/x86/Makefile
+# sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=5.10/g' target/linux/x86/Makefile
 
 # 修改openwrt登陆地址,把下面的192.168.6.1修改成你想要的就可以了
-sed -i 's/192.168.1.1/192.168.5.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.6.2/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把OpenWrt-1.0修改你喜欢的就行（不能纯数字或者使用中文）
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-1.0'' package/lean/default-settings/files/zzz-default-settings
