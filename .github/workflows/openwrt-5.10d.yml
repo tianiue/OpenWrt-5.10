@@ -12,8 +12,8 @@ name: openwrt-5.10Docker
 
 on:
   repository_dispatch:
-  schedule:
-    - cron: 0 22 5,15,25 * *
+  # schedule:
+  #   - cron: 0 22 5,15,25 * *
   workflow_dispatch:
     inputs:
       ssh:
